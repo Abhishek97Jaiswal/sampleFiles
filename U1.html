@@ -1,0 +1,70 @@
+<center>
+
+<form>
+	 STATE: <select name="State" onChange="populateDistrict()">
+					<option value="0">Select State</option>
+					<option value="1">BIHAR</option>
+					<option value="2">U.P</option>
+					<option value="3">JHARKHAND</option>
+					<option value="4">RAJSTHAN</option>
+		   </select> 
+           </br>
+           </br>
+  <dv id="divId">
+  DISRICT: <select  name="City" onclick="checkStateSelection()"> 
+                    <option value="0">Select District</option>
+           </select></br>
+  </dv>
+  </br>  
+	<input type="submit"/>
+  </form>
+
+<script>
+       function checkStateSelection()
+	   {
+           var myForm=document.forms[0].State;
+	       if(myForm.value==0)
+		   {
+		    alert("first Select STATE");
+            myForm.focus();
+		   }
+       }
+
+
+       function populateDistrict()
+	   {
+           var d1= "DISRICT: <select  name='City'"+ "onclick='checkStateSelection()'>"+
+		           "<option value='0'>Select District</option>"
+            var myForm=document.forms[0].State;
+			    if(myForm.value==1)
+		        {
+					d1+="<option value='1'>Muzaffarpur</option>";
+					d1+="<option value='2'>Hazipur</option>";
+					d1+="<option value='3'>Patna</option>";
+					d1+="<option value='4'>Gya</option>";
+		        }
+				else if(myForm.value==2)
+				{
+                    d1+="<option value='1'>Luknow</option>";
+					d1+="<option value='2'>Kanpur</option>";
+					d1+="<option value='3'>Ilhabad</option>";
+					d1+="<option value='4'>Bnaras</option>";
+				}
+				else if(myForm.value==3)
+				{
+                    d1+="<option value='1'>Ranchi</option>";
+					d1+="<option value='2'>Bokaro</option>";
+					d1+="<option value='3'>Jamsedpur</option>";
+					d1+="<option value='4'>Devgadh</option>";
+				}
+				else if(myForm.value==4)
+				{
+                    d1+="<option value='1'>Jaipur</option>";
+					d1+="<option value='2'>Kota</option>";
+					d1+="<option value='3'>Sikkar</option>";
+					d1+="<option value='4'>Jodhpur</option>";
+				}
+           d1+="</select>"
+		   document.getElementById("divId").innerHTML=d1;
+       }
+</script>

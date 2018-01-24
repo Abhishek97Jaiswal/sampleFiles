@@ -1,0 +1,28 @@
+<form>
+<input type="button" value="addinarray" onclick="add()"/>
+<input type="button" value="populated" onclick="populate()"/>
+<input type="button" value="remove" onclick="remove()"/>
+</form>
+<script>
+  var data=new Array();
+   function add()
+   {
+     for(var i=0;i<10;i++)
+	   {
+	     data[data.length]=i*10;
+	   }
+   }
+   function populate()
+   {
+     for(var i=0;i<data.length;i++)
+	   {
+	     alert(data[i]);
+	   }
+   }
+   function remove()
+   {
+     
+	     data.splice(0,data.length);
+	   
+   }
+</script>

@@ -1,0 +1,34 @@
+<div id="title"></div>
+
+<form>
+   First Name : <input type="text" name="firstName"/></br>
+   Gender :
+    <input type="radio" name="gender" value="m" onclick="generateTitle()"/> Male
+    <input type="radio" name="gender" value="f" onclick="generateTitle()"/> female
+    ......</br>
+    ......</br>
+   
+	 <input type="submit" value="submit"/>
+</form> 
+
+<script>
+
+  function generateTitle()
+  {
+     var f1 = document.forms[0];
+	 var fn = f1.firstName.value; 
+	 var gn = f1.gender.value; 
+     var title = "";
+	 if(gn == 'm')
+	  {
+          title=" hello,Mr." +fn;
+	  }
+       
+	   else
+	  {
+         title = " hello , Mrs." +fn; 
+	  }
+	  document.getElementById("title").innerHTML = title;
+  }
+
+  </script>

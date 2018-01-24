@@ -1,0 +1,27 @@
+<script>
+	var data = new Array();//array is a global here...even array also declare with var...
+	function populateArray()
+	{
+	   for (var i=0;i < 10 ; i++)
+	   {
+		   data[data.length] =i*10;
+	   }
+	}
+	function printArray()
+	{
+	   for (var i=0;i < data.length ; i++)
+	   {
+		   alert(data[i]);
+	   }
+	}
+	function removeArrayContent()
+	{
+	   data.splice(0,data.length);//splice is a one of the built in method...to                                                                         removeArrayContent
+	}
+</script>
+<input type="button" value='print populateArray content' 
+                             onclick="populateArray()"/>
+<input type="button" value='print printArray content' 
+                               onclick="printArray()"/>
+<input type="button" value='print removeArrayContent content' 
+                               onclick="removeArrayContent()"/>

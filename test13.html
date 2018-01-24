@@ -1,0 +1,30 @@
+<form name="testForm">
+
+Education : 
+          <select name="education">
+		    <option value="">plz select </option>
+		    <option value="be">BE </option>
+		    <option value="cse">CSE </option>
+		    <option value="mba">MBA </option>
+		    <option value="mca">MCA </option>
+          </select></br>
+
+		  <input type="submit" value="submit" onclick="return validation()"/>
+</form>
+
+<script>
+
+function validation()
+   {
+      var f1 = document.testForm;
+	  var education = f1.education;
+	  
+	  if(education.value == "")
+	   {
+         alert("pls select education");
+		 education.focus();
+		 return false;
+
+	   }
+   }
+</script>

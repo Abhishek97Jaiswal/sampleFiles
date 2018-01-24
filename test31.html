@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+  <script>
+	var data = new Array();//array is a global here...even array also declare with var...
+	function populateArray()
+	{
+	   for (var i=0;i < 10 ; i++)
+	   {
+		   data[data.length] =i*10;
+	   }
+	}
+	function printArray()
+	{
+	   for (var i=0;i < data.length ; i++)
+	   {
+		   alert(data[i]);
+	   }
+	}
+	function removeFewElementsFromArray()
+	{
+	   data.splice(3,4);//from index no.3 onwards to 4 elements removed...                                                                    
+	}
+</script>
+<input type="button" value='print populateArray content' 
+                             onclick="populateArray()"/>
+<input type="button" value='print printArray content' 
+                               onclick="printArray()"/>
+<input type="button" value='print removeFewElementsFromArray content' 
+                               onclick="removeFewElementsFromArray()"/>
+ </body>
+</html>
+<!--
+in java we can't remove elements from Array...
+but in java script we can remove elements from Array...
+-->

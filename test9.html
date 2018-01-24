@@ -1,0 +1,29 @@
+      
+
+<form name='test'>
+
+Address: <textarea  name='address' rows='9' cols="20"></textarea></br> 
+<input type='submit' value="submit" onclick='return validateForm()' />
+</form>
+
+
+<script>
+
+function validateForm() 
+{
+	var f1 = document.test;
+    var address = f1.address;
+
+	
+	if(address.value.length==0)
+	{
+		alert("plzz enter address");
+		address.focus();
+		return false;  
+		
+    }
+
+}
+
+</script>
+/

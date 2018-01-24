@@ -1,0 +1,72 @@
+<form>
+     State : <select name="state" onchange="populateDistricts()">
+             <option value="0"> SELECT</option>
+             <option value="1"> Karnataka</option>
+             <option value="2"> ANDRA</option>
+             <option value="3"> TELANGANA</option>
+	     </select>
+
+<div id="districtsDiv">
+     Districts : <select name="district" onclick="checkStateSelection()">
+                      <option value="0">Select State</option> 
+					  </select>
+</div>
+....</br>
+....</br>
+....</br>
+....</br>
+</form>
+
+
+<script>
+       function checkStateSelection()
+	   {
+          var myForm = document.forms[0];
+		  var myState = myForm.state;
+
+		  if(myState.values=="0")
+		   {
+              alert("select any State");
+			   myState.focus();
+			 
+		   }
+	   }
+
+function populateDistricts()
+		   {
+              var d1 = "District : <select name='district' "+ "onclick='checkStateSelection()'> " + "<option value='0'> SELECT STATE</option>"
+			  
+			  var myForm=document.forms[0];
+			  var myState= myForm.state;
+			  if (myState.value == "1")
+			  {
+				  d1 += "<option value='1' > Bangalore</option>";
+				  d1 += "<option value='2' > Mysore</option>";
+				  d1 += "<option value='3' > Ballary</option>";
+			  }
+
+			  else if(myState.value == '2')
+			   {
+                  d1 += "<option value='5' > VijayMandir</option>";
+				  d1 += "<option value='6' > Badlapur</option>";
+				  d1 += "<option value='7' > chittor</option>";
+                 
+			   }
+
+			   else if(myState.value == '3')
+			   {
+                  d1 += "<option value='8' > Hyderabad</option>";
+				  d1 += "<option value='9' > pune</option>";
+				  d1 += "<option value='10' > mumbai</option>";
+                 
+			   }
+
+			   d1 += "</select>";
+			   document.getElementById("districtsDiv").innerHTML = d1;
+		   }
+  
+	  
+
+</script>
+
+

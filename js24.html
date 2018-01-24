@@ -1,0 +1,23 @@
+<div id="div1">
+   Div1 content
+
+</div>
+
+<div id="div2">
+   Div2 content
+</div>
+
+<input type="button" value="button" onclick="swapDivs()"/>
+
+<script>
+   function swapDivs()
+   {
+	   var v1 = document.getElementById("div1").innerHTML;
+	   var v2 = document.getElementById("div2").innerHTML;
+
+	  document.getElementById("div1").innerHTML=v2;
+	  document.getElementById("div2").innerHTML=v1;
+	   
+   }
+
+</script>

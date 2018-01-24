@@ -1,0 +1,35 @@
+      
+
+<form name='myform'>
+
+Username: <input type='text' name='username' /></br>
+password: <input type='password' name='password' /></br>
+<input type='submit' value="submit" onclick='return validateLogin()' />
+</form>
+
+
+<script>
+
+function validateLogin() 
+{
+	var f1 = document.myform;
+    var un = f1.username;
+	var pw = f1.password;
+	
+	if(un.value.length==0)
+	{
+		alert("plzz enter username");
+		un.focus();
+		return false;  
+		
+    }
+
+	if(pw.value.length==0)
+	{
+		alert("plzz enter password");
+		pw.focus();
+        return false;
+	}
+}
+
+</script>

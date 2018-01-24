@@ -1,0 +1,38 @@
+      
+
+<form name='firstform'>
+
+Parameter1: <input type='text' name='param1' /></br>
+Parameter2: <input type='text' name='param2' /></br>
+ <input type='submit' value="submit" onclick='return text1()' />
+</form>
+
+
+<script>
+
+function text1() 
+{
+	var f1 = document.firstform.param1;
+	var f2 = document.firstform.param2;
+	
+	if(f1.value.length==0)
+	{
+		alert("plzz enter param1");
+		f1.focus();
+		return false;  
+		
+    }
+
+	if(f2.value.length==0)
+	{
+		alert("plzz enter param2");
+		f2.focus();
+        return false;
+	}
+
+
+   
+
+}
+
+</script>

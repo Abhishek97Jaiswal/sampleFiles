@@ -1,0 +1,16 @@
+<form name='myname'>
+    Parameter: <input type='text' name='param1'/>
+	<input type='submit' value='submit' onclick='return validate()'/>
+	</form>
+
+	<script>
+	  function validate()
+	  { 
+          if(document.myname.param1.value.length==0)
+		  { 
+		     alert("pls enter Parameter1");
+
+			 return false; //if we not return any boolean by default function returning true.
+		  }
+	  }
+	  </script>

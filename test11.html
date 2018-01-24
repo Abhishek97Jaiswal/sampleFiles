@@ -1,0 +1,40 @@
+<form name='test'>
+  
+
+Skills : <input type="radio" name="skill" value='c'/>C &nbsp;
+         <input type="radio" name="skill" value='c++'/>C++ &nbsp
+         <input type="radio" name="skill" value='java'/>Java &nbsp
+         <input type="radio" name="skill" value='.net'/>.net &nbsp
+         <input type="radio" name="skill" value='sql'/>sql </br>
+         
+         <input type="submit" value="submit" onclick="return validate()"/>
+
+</form>
+
+
+<script>
+
+function validate()
+{
+	
+	var f1 = document.test;
+	var g1 = f1.skill;
+	var flag = true;
+	for(var i=0; i < g1.length;i++)
+	{
+        if(g1[i].checked)
+		{
+			flag=false;
+			break;
+		}
+  }
+
+   if(flag)
+	{
+		alert("plz select skill");
+		g1[0].focus();
+        return false;
+	}
+}
+
+</script>
